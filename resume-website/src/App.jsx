@@ -490,7 +490,7 @@ function App() {
                     Innnovation: Computer Vision-Based Accident Detection and Reporting System
                   </p>
 
-                  <span className="achievement-year">2026</span>
+                  <span className="achievement-year">- 2026 -</span>
                 </div>
                 <a href="/Resume/achievements/AIoTIE2026_Award_Silver_AIOTIE2026-125.pdf" target="_blank" rel="noreferrer" className="certificate-btn" > View Certificate </a>
               </div>
@@ -513,7 +513,7 @@ function App() {
                     Participated in New Era Capture The Flag (CTF) Cyber Security Competition
                   </p>
 
-                  <span className="achievement-year">2023</span>
+                  <span className="achievement-year">- 2023 -</span>
                 </div>
                 <a href="/Resume/achievements/ctf.pdf" target="_blank" rel="noreferrer" className="certificate-btn" > View Certificate </a>
               </div>
@@ -536,7 +536,7 @@ function App() {
                     Succefully completed Python Full Stack Course provided by Six Star Education
                   </p>
 
-                  <span className="achievement-year">2022</span>
+                  <span className="achievement-year">- 2022 -</span>
                 </div>
                 <a href="/Resume/achievements/Six Star Python Completion Certificate.pdf" target="_blank" rel="noreferrer" className="certificate-btn" > View Certificate </a>
               </div>
