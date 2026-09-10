@@ -4,6 +4,10 @@ import { useState } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <div className="app">
@@ -24,13 +28,12 @@ function App() {
           </button>
 
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#contact">Contact</a>
+          <a href="#home" onClick={closeMenu}>Home</a>
+          <a href="#about" onClick={closeMenu}>About</a>
+          <a href="#skills" onClick={closeMenu}>Skills</a>
+          <a href="#projects" onClick={closeMenu}>Projects</a>
+          <a href="#achievements" onClick={closeMenu}>Achievements</a>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
           </div>
         </div>
       </nav>
