@@ -28,11 +28,11 @@ const careerData = [
   },
   {
     year: "2024",
-    title: "IT Internship",
+    title: "Website Technical Assistant",
     company: "Thye Hin Computer",
     period: "February 2024 – May 2024",
     description:
-      "Gained practical experience in the IT and computer industry while developing technical and problem-solving skills in a professional working environment.",
+      "Managed website and e-commerce platforms, updated product data and media, provided hardware troubleshooting and technical support, and developed a Return Merchandise Authorization (RMA) System to streamline product return management.",
   },
   {
     year: "2023",
