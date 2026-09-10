@@ -1,6 +1,7 @@
 import "./App.css";
 import AnimatedSection from "./AnimatedSection";
 import { useState } from "react";
+import Career from "./Career";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +32,7 @@ function App() {
           <a href="#home" onClick={closeMenu}>Home</a>
           <a href="#about" onClick={closeMenu}>About</a>
           <a href="#skills" onClick={closeMenu}>Skills</a>
+          <a href="#career" onClick={closeMenu}>Career and Education</a>
           <a href="#projects" onClick={closeMenu}>Projects</a>
           <a href="#achievements" onClick={closeMenu}>Achievements</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
@@ -45,7 +47,7 @@ function App() {
           <h1>
             HO ZI LE
           </h1>
-          <h2>Software Engineering Student</h2>
+          <h2>Software Engineer</h2>
 
           <p className="hero-description">
             I build web applications and explore software engineering,
@@ -76,43 +78,50 @@ function App() {
           <h2>Who I Am</h2>
 
           <div className="about-content">
-            <div className="about-text-container">
-            <p className="about-text">
-              I am a motivated and detail-oriented{" "}
-              <strong>Software Engineering student</strong> with a strong foundation in
-              programming, web development, database management, and software
-              development. I primarily work with technologies such as <strong>Python, Java,
-              MySQL, Django, and Flutter</strong>  to build practical and user-friendly
-              applications.
-            </p>
 
-            <p className="about-text">
-              I also have a growing interest and hands-on experience in{" "}
-              <strong>Artificial Intelligence</strong> and{" "}
-              <strong>Computer Vision</strong>. I have worked with technologies such as{" "}
-              <strong>YOLO</strong> and <strong>TensorFlow</strong> to develop and
-              experiment with image detection, image classification, and computer
-              vision applications.
-            </p>
-
-            <p className="about-text">
-              I enjoy learning new technologies, solving technical problems, and
-              turning ideas into practical projects. I am eager to continue developing
-              my skills and contribute to real-world software and technology solutions.
-            </p>
-
-            </div>
-
+            {/* Profile Image */}
             <div className="about-image">
               <img src="/Resume/profile.jpeg" alt="Alex Ho" />
             </div>
+
+            {/* Description */}
+            <div className="about-text-container">
+
+              <p className="about-text">
+                I am a motivated and detail-oriented{" "}
+                <strong>Software Engineering student</strong> with a strong
+                foundation in programming, web development, database management,
+                and software development. I primarily work with technologies such
+                as <strong>Python, Java, MySQL, Django, and Flutter</strong> to
+                build practical and user-friendly applications.
+              </p>
+
+              <p className="about-text">
+                I also have a growing interest and hands-on experience in{" "}
+                <strong>Artificial Intelligence</strong> and{" "}
+                <strong>Computer Vision</strong>. I have worked with technologies
+                such as <strong>YOLO</strong> and <strong>TensorFlow</strong> to
+                develop and experiment with image detection, image classification,
+                and computer vision applications.
+              </p>
+
+              <p className="about-text">
+                I enjoy learning new technologies, solving technical problems, and
+                turning ideas into practical projects. I am eager to continue
+                developing my skills and contribute to real-world software and
+                technology solutions.
+              </p>
+
+            </div>
+
           </div>
         </div>
       </section>
     </AnimatedSection>
+    <Career />
 
 
-      <AnimatedSection>
+    <AnimatedSection>
       {/* Skills */}
       <section id="skills" className="section skills-section">
         <div className="container">
