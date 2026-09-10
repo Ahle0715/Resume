@@ -21,7 +21,7 @@ const careerData = [
   {
     year: "2025",
     title: "Bachelor of Software Engineering",
-    company: "New Era University College",
+    company: "New Era University College (CGPA:3.93/4.00)",
     period: "2025 – Present",
     description:
       "Currently pursuing a Bachelor of Software Engineering with a focus on software development, artificial intelligence, web technologies, and computer vision.",
@@ -37,7 +37,7 @@ const careerData = [
   {
     year: "2023",
     title: "Diploma in Computer Science",
-    company: "Computer Science",
+    company: "New Era University College (CGPA:3.89/4.00)",
     period: "2023 – 2025",
     description:
       "Built a strong foundation in programming, software development, databases, and computer science fundamentals.",
