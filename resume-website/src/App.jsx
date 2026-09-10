@@ -40,7 +40,7 @@ function App() {
             </a>
 
             <a
-            href={`${import.meta.env.BASE_URL}resume.pdf`}
+            href="/Resume/resume.pdf"
             target="_blank"
             className="btn secondary"
             >
@@ -86,7 +86,7 @@ function App() {
             </div>
 
             <div className="about-image">
-              <img src={`${import.meta.env.BASE_URL}profile.jpeg`} alt="Alex Ho" />
+              <img src="/Resume/profile.jpeg" alt="Alex Ho" />
             </div>
           </div>
         </div>
@@ -449,7 +449,7 @@ function App() {
               <div className="achievement-card">
                 <div className="achievement-logo">
                   <img
-                    src={`${import.meta.env.BASE_URL}achievements/AIOTIE_2026.png`}
+                    src="/Resume/achievements/AIOTIE_2026.png"
                     alt="Achievement 1 logo"
                   />
                 </div>
@@ -465,14 +465,14 @@ function App() {
 
                   <span className="achievement-year">2026</span>
                 </div>
-                <a href={`${import.meta.env.BASE_URL}achievements/AIoTIE2026_Award_Silver_AIOTIE2026-125.pdf`} target="_blank" rel="noreferrer" className="certificate-btn" > View Certificate </a>
+                <a href="/Resume/achievements/AIoTIE2026_Award_Silver_AIOTIE2026-125.pdf" target="_blank" rel="noreferrer" className="certificate-btn" > View Certificate </a>
               </div>
 
               {/* Achievement 2 */}
               <div className="achievement-card">
                 <div className="achievement-logo">
                   <img
-                    src={`${import.meta.env.BASE_URL}profile.jpeg`}
+                    src="/Resume/achievements/six_star_edu.png"
                     alt="Achievement 2 logo"
                   />
                 </div>
@@ -488,7 +488,7 @@ function App() {
 
                   <span className="achievement-year">2022</span>
                 </div>
-                <a href={`${import.meta.env.BASE_URL}achievements/Six Star Python Completion Certificate.pdf`} target="_blank" rel="noreferrer" className="certificate-btn" > View Certificate </a>
+                <a href="/Resume/achievements/Six Star Python Completion Certificate.pdf" target="_blank" rel="noreferrer" className="certificate-btn" > View Certificate </a>
               </div>
 
             </div>
@@ -562,7 +562,7 @@ function App() {
               </p>
 
               <a
-                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                href="/Resume/resume.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="resume-btn"
