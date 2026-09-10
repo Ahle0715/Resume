@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="app">
       {/* Navigation */}
-       <nav className="navbar">
+       <nav className="navbar"> 
         <div className="nav-container">
           <h2 className="logo">HO ZI LE </h2>
 
@@ -472,8 +472,31 @@ function App() {
               <div className="achievement-card">
                 <div className="achievement-logo">
                   <img
-                    src="/Resume/achievements/six_star_edu.png"
+                    src="/Resume/achievements/ctf.png"
                     alt="Achievement 2 logo"
+                  />
+                </div>
+
+                <div className="achievement-content">
+                  <p className="achievement-result">Cybersecurity</p>
+
+                  <h3>New Era Capture The Flag (CTF) Cyber Security Competition Achievement (2023)</h3>
+
+                  <p className="achievement-description">
+                    Participated in New Era Capture The Flag (CTF) Cyber Security Competition
+                  </p>
+
+                  <span className="achievement-year">2023</span>
+                </div>
+                <a href="/Resume/achievements/ctf.pdf" target="_blank" rel="noreferrer" className="certificate-btn" > View Certificate </a>
+              </div>
+
+              {/* Achievement 3 */}
+              <div className="achievement-card">
+                <div className="achievement-logo">
+                  <img
+                    src="/Resume/achievements/six_star_edu.png"
+                    alt="Achievement 3 logo"
                   />
                 </div>
 
