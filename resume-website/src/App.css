@@ -145,7 +145,10 @@ img {
 ========================================================= */
 
 .hero {
+  position: relative;
+
   min-height: 100vh;
+  min-height: 100svh;
 
   display: flex;
   justify-content: center;
@@ -153,7 +156,7 @@ img {
 
   text-align: center;
 
-  padding: 120px 24px 70px;
+  padding: 120px 24px 100px;
 
   background:
     radial-gradient(
@@ -172,6 +175,7 @@ img {
 .hero-content {
   width: 100%;
   max-width: 750px;
+  margin: 0 auto;
 }
 
 .hero-greeting {
@@ -203,6 +207,109 @@ img {
 
   font-size: clamp(15px, 2vw, 18px);
   color: #756d64;
+}
+
+
+/* =========================================================
+   HERO ENTRANCE ANIMATION
+========================================================= */
+
+.hero-content > * {
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  animation:
+    fadeUp 0.8s ease forwards;
+}
+
+.hero-greeting {
+  animation-delay: 0.1s;
+}
+
+.hero h1 {
+  animation-delay: 0.25s;
+}
+
+.hero h2 {
+  animation-delay: 0.4s;
+}
+
+.hero-description {
+  animation-delay: 0.55s;
+}
+
+.hero-buttons {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   SCROLL HINT
+========================================================= */
+
+.scroll-hint {
+  position: absolute;
+
+  bottom: 30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 0.85rem;
+  color: #6f675e;
+
+  opacity: 0;
+
+  animation:
+    showScrollHint 0.8s ease 1.8s forwards;
+}
+
+.scroll-arrow {
+  font-size: 1.4rem;
+  line-height: 1;
+
+  animation:
+    arrowBounce 2s ease-in-out 2.6s infinite;
+}
+
+@keyframes showScrollHint {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
 }
 
 
@@ -239,7 +346,9 @@ img {
 }
 
 
-/* Primary */
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
 
 .btn.primary {
   background: #c96f4a;
@@ -257,7 +366,9 @@ img {
 }
 
 
-/* Secondary */
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
 
 .btn.secondary {
   background: transparent;
@@ -292,7 +403,6 @@ img {
   font-size: 13px;
 
   font-weight: bold;
-
   letter-spacing: 2px;
 
   color: #c96f4a;
@@ -319,7 +429,6 @@ img {
   display: flex;
 
   flex-direction: column;
-
   align-items: center;
 
   width: 100%;
@@ -561,7 +670,7 @@ img {
   align-items: center;
   justify-content: center;
 
-  padding: 15px;
+  padding: 8px;
 
   background: #f7f3ea;
 
@@ -724,7 +833,6 @@ img {
   border-radius: 16px;
 
   backface-visibility: hidden;
-
   -webkit-backface-visibility: hidden;
 
   overflow: hidden;
@@ -752,7 +860,6 @@ img {
   transform: rotateY(180deg);
 
   overflow-y: auto;
-
   overflow-x: hidden;
 }
 
@@ -1215,54 +1322,6 @@ img {
 
 
 /* =========================================================
-   HERO ENTRANCE ANIMATION
-========================================================= */
-
-.hero-content > * {
-  opacity: 0;
-
-  transform: translateY(25px);
-
-  animation:
-    fadeUp 0.8s ease forwards;
-}
-
-.hero-greeting {
-  animation-delay: 0.1s;
-}
-
-.hero h1 {
-  animation-delay: 0.25s;
-}
-
-.hero h2 {
-  animation-delay: 0.4s;
-}
-
-.hero-description {
-  animation-delay: 0.55s;
-}
-
-.hero-buttons {
-  animation-delay: 0.7s;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-
-    transform: translateY(25px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform: translateY(0);
-  }
-}
-
-
-/* =========================================================
    TABLET
    1000px and below
 ========================================================= */
@@ -1273,8 +1332,6 @@ img {
     padding: 85px 24px;
   }
 
-  /* Projects */
-
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1282,8 +1339,6 @@ img {
   .project-card {
     height: 450px;
   }
-
-  /* Contact */
 
   .contact-content {
     gap: 40px;
@@ -1356,7 +1411,13 @@ img {
   /* Hero */
 
   .hero {
-    padding: 110px 20px 60px;
+    padding: 110px 20px 90px;
+  }
+
+  .scroll-hint {
+    bottom: 22px;
+
+    font-size: 0.8rem;
   }
 
 
@@ -1449,7 +1510,7 @@ img {
   .hero {
     min-height: 100svh;
 
-    padding: 110px 20px 50px;
+    padding: 110px 20px 75px;
   }
 
   .hero-greeting {
@@ -1470,6 +1531,21 @@ img {
     font-size: 15px;
 
     line-height: 1.7;
+  }
+
+
+  /* Scroll Hint */
+
+  .scroll-hint {
+    bottom: 18px;
+
+    gap: 4px;
+
+    font-size: 0.75rem;
+  }
+
+  .scroll-arrow {
+    font-size: 1.2rem;
   }
 
 
@@ -1740,6 +1816,8 @@ img {
     padding-left: 15px;
 
     padding-right: 15px;
+
+    padding-bottom: 70px;
   }
 
   .hero-greeting {
@@ -1759,6 +1837,19 @@ img {
   }
 
 
+  /* Scroll Hint */
+
+  .scroll-hint {
+    bottom: 14px;
+
+    font-size: 0.7rem;
+  }
+
+  .scroll-arrow {
+    font-size: 1.1rem;
+  }
+
+
   /* Sections */
 
   .section {
@@ -1774,7 +1865,6 @@ img {
 
   .about-image img {
     width: 175px;
-
     height: 175px;
   }
 
@@ -1873,6 +1963,10 @@ img {
     font-size: 17px;
   }
 
+  .hero-description {
+    font-size: 13.5px;
+  }
+
   .btn {
     width: 100%;
   }
@@ -1958,6 +2052,13 @@ img {
     opacity: 1;
 
     transform: none;
+  }
+
+  .scroll-hint,
+  .scroll-arrow {
+    animation: none;
+
+    opacity: 0.7;
   }
 
   .animated-section {

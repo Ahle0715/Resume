@@ -67,6 +67,12 @@ function App() {
             View Resume
             </a>
           </div>
+
+          <div className="scroll-hint">
+            <span className="scroll-arrow">↓</span>
+            <span>Scroll to explore</span>
+          </div>
+
         </div>
       </section>
 
