@@ -957,6 +957,8 @@ img {
   margin: 0;
 
   padding-left: 18px;
+
+  text-align:left;
 }
 
 .project-detail-section li {
