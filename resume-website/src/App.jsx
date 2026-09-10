@@ -89,7 +89,7 @@ function App() {
 
               <p className="about-text">
                 I am a motivated and detail-oriented{" "}
-                <strong>Software Engineering student</strong> with a strong
+                <strong>Software Engineer</strong> with a strong
                 foundation in programming, web development, database management,
                 and software development. I primarily work with technologies such
                 as <strong>Python, Java, MySQL, Django, and Flutter</strong> to
