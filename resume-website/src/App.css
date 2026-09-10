@@ -1181,7 +1181,44 @@ img {
   }
 }
 
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
 
+  width: 42px;
+  height: 42px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+
+  background: #2f2a24;
+  border-radius: 3px;
+
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 /* =========================================================
    TABLET
    1000px and below
@@ -1239,14 +1276,49 @@ img {
 @media (max-width: 800px) {
 
   /* Navbar */
+  .navbar {
+    position: fixed;
+  }
 
   .nav-container {
-    padding: 16px 20px;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .nav-links {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(255, 253, 248, 0.98);
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
     gap: 18px;
   }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+
 
 
   /* Hero */

@@ -1,15 +1,30 @@
 import "./App.css";
 import AnimatedSection from "./AnimatedSection";
+import { useState } from "react";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="app">
       {/* Navigation */}
        <nav className="navbar"> 
         <div className="nav-container">
           <h2 className="logo">HO ZI LE </h2>
+          {/* Hamburger Button */}
+          <button
+          className={`hamburger ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-          <div className="nav-links">
+          <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
