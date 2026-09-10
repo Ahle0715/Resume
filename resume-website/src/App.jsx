@@ -521,7 +521,7 @@ function App() {
               <div className="contact-item">
                 <span className="contact-label">Email</span>
 
-                <a href="mailto:le1230715@gmail.com">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=le1230715@gmail.com" >
                   le1230715@gmail.com
                 </a>
               </div>
