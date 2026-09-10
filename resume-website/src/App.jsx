@@ -86,7 +86,7 @@ function App() {
             </div>
 
             <div className="about-image">
-              <img src="/profile.jpeg" alt="Alex Ho" />
+              <img src="${import.meta.env.BASE_URL}profile.jpeg" alt="Alex Ho" />
             </div>
           </div>
         </div>
@@ -449,7 +449,7 @@ function App() {
               <div className="achievement-card">
                 <div className="achievement-logo">
                   <img
-                    src="/achievements/AIOTIE_2026.png"
+                    src="${import.meta.env.BASE_URL}achievements/AIOTIE_2026.png"
                     alt="Achievement 1 logo"
                   />
                 </div>
@@ -472,7 +472,7 @@ function App() {
               <div className="achievement-card">
                 <div className="achievement-logo">
                   <img
-                    src="/achievements/six_star_edu.png"
+                    src="${import.meta.env.BASE_URL}achievements/six_star_edu.png"
                     alt="Achievement 2 logo"
                   />
                 </div>
