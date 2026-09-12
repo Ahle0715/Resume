@@ -199,7 +199,7 @@ function App() {
               <strong>Software Engineer</strong> with a strong
               foundation in programming, web development, database management,
               and software development. I primarily work with technologies such
-              as <strong>Python, Java, MySQL, Django, and Flutter</strong> to
+              as <strong>Python, React, MySQL, Django, Java, and Flutter</strong> to
               build practical and user-friendly applications.
             </p>
 
