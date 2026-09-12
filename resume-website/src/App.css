@@ -2703,6 +2703,116 @@ REDUCED MOTION
 
 
 /* =========================================================
+   BACK TO TOP BUTTON
+========================================================= */
+
+.to-top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(201, 111, 74, 0.45);
+  border-radius: 50%;
+
+  background: rgba(255, 253, 248, 0.92);
+  color: #c96f4a;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 20px rgba(47, 42, 36, 0.12);
+
+  z-index: 1000;
+
+  animation: topButtonAppear 0.35s ease forwards;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Arrow */
+.to-top-button::before {
+  content: "↑";
+
+  font-size: 22px;
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+/* Hover */
+.to-top-button:hover {
+  transform: translateY(-4px);
+
+  background: #c96f4a;
+  color: #fffdf8;
+
+  border-color: #c96f4a;
+
+  box-shadow:
+    0 10px 25px rgba(47, 42, 36, 0.18);
+}
+
+/* Arrow movement */
+.to-top-button:hover::before {
+  transform: translateY(-3px);
+}
+
+/* Click */
+.to-top-button:active {
+  transform: translateY(-1px);
+}
+
+/* Appearance */
+@keyframes topButtonAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .to-top-button {
+    right: 18px;
+    bottom: 20px;
+
+    width: 46px;
+    height: 46px;
+  }
+
+  .to-top-button::before {
+    font-size: 20px;
+  }
+}
+/* =========================================================
    SMALL MOBILE
    400px and below
 ========================================================= */

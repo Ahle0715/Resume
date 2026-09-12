@@ -6,10 +6,23 @@ import Career from "./Career";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-
+  const [showTopButton, setShowTopButton] = useState(false);
+  
   const closeMenu = () => {
     setMenuOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTopButton(window.scrollY > 500);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -69,14 +82,6 @@ function App() {
           </button>
 
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-
-            <a
-              href="#home"
-              className={activeSection === "home" ? "active" : ""}
-              onClick={closeMenu}
-            >
-              Home
-            </a>
 
             <a
               href="#about"
@@ -742,7 +747,22 @@ function App() {
       <footer className="footer">
         <p>© 2026 HO ZI LE. All rights reserved.</p>
       </footer>
+
+      {showTopButton && (
+        <button
+          className="to-top-button"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          aria-label="Back to top"
+        />
+      )}
     </div>
+
+    
   );
 }
 
