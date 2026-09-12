@@ -178,52 +178,52 @@ function App() {
       </section>
 
     <AnimatedSection>
-      {/* About */}
-      <section id="about" className="section">
-        <div className="container">
-          <p className="section-label">ABOUT ME</p>
-          <h2>Who I Am</h2>
+    {/* About */}
+    <section id="about" className="section about-section">
+      <div className="container">
+        <p className="section-label">ABOUT ME</p>
+        <h2>Who I Am</h2>
 
-          <div className="about-content">
+        <div className="about-content">
 
-            {/* Profile Image */}
-            <div className="about-image">
-              <img src="/Resume/profile.jpeg" alt="Alex Ho" />
-            </div>
+          {/* Profile Image */}
+          <div className="about-image">
+            <img src="/Resume/profile.jpeg" alt="Alex Ho" />
+          </div>
 
-            {/* Description */}
-            <div className="about-text-container">
+          {/* Description */}
+          <div className="about-text-container">
 
-              <p className="about-text">
-                I am a motivated and detail-oriented{" "}
-                <strong>Software Engineer</strong> with a strong
-                foundation in programming, web development, database management,
-                and software development. I primarily work with technologies such
-                as <strong>Python, Java, MySQL, Django, and Flutter</strong> to
-                build practical and user-friendly applications.
-              </p>
+            <p className="about-text">
+              I am a motivated and detail-oriented{" "}
+              <strong>Software Engineer</strong> with a strong
+              foundation in programming, web development, database management,
+              and software development. I primarily work with technologies such
+              as <strong>Python, Java, MySQL, Django, and Flutter</strong> to
+              build practical and user-friendly applications.
+            </p>
 
-              <p className="about-text">
-                I also have a growing interest and hands-on experience in{" "}
-                <strong>Artificial Intelligence</strong> and{" "}
-                <strong>Computer Vision</strong>. I have worked with technologies
-                such as <strong>YOLO</strong> and <strong>TensorFlow</strong> to
-                develop and experiment with image detection, image classification,
-                and computer vision applications.
-              </p>
+            <p className="about-text">
+              I also have a growing interest and hands-on experience in{" "}
+              <strong>Artificial Intelligence</strong> and{" "}
+              <strong>Computer Vision</strong>. I have worked with technologies
+              such as <strong>YOLO</strong> and <strong>TensorFlow</strong> to
+              develop and experiment with image detection, image classification,
+              and computer vision applications.
+            </p>
 
-              <p className="about-text">
-                I enjoy learning new technologies, solving technical problems, and
-                turning ideas into practical projects. I am eager to continue
-                developing my skills and contribute to real-world software and
-                technology solutions.
-              </p>
-
-            </div>
+            <p className="about-text">
+              I enjoy learning new technologies, solving technical problems, and
+              turning ideas into practical projects. I am eager to continue
+              developing my skills and contribute to real-world software and
+              technology solutions.
+            </p>
 
           </div>
+
         </div>
-      </section>
+      </div>
+    </section>
     </AnimatedSection>
     
     <AnimatedSection>
