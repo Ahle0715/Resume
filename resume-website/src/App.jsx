@@ -1,27 +1,67 @@
 import "./App.css";
 import AnimatedSection from "./AnimatedSection";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Career from "./Career";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  
+  const [activeSection, setActiveSection] = useState("home");
+
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort(
+            (a, b) =>
+              b.intersectionRatio - a.intersectionRatio
+          );
+  
+        if (visibleSections.length > 0) {
+          setActiveSection(visibleSections[0].target.id);
+        }
+      },
+      {
+        threshold: [0.2, 0.4, 0.6],
+        rootMargin: "-80px 0px -20% 0px",
+      }
+    );
+  
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <div className="app">
       {/* Navigation */}
-       <nav className="navbar"> 
+      <nav className="navbar">
         <div className="nav-container">
-        <img className="portrait-logo" src="/Resume/potrait_AI.png" alt="Portrait" />
+
+          <img
+            className="portrait-logo"
+            src="/Resume/potrait_AI.png"
+            alt="Portrait"
+          />
+
           {/* Hamburger Button */}
           <button
-          className={`hamburger ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
+            className={`hamburger ${menuOpen ? "active" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
           >
             <span></span>
             <span></span>
@@ -29,13 +69,63 @@ function App() {
           </button>
 
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <a href="#home" onClick={closeMenu}>Home</a>
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#skills" onClick={closeMenu}>Skills</a>
-          <a href="#career" onClick={closeMenu}>Career and Education</a>
-          <a href="#projects" onClick={closeMenu}>Projects</a>
-          <a href="#achievements" onClick={closeMenu}>Achievements</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
+
+            <a
+              href="#home"
+              className={activeSection === "home" ? "active" : ""}
+              onClick={closeMenu}
+            >
+              Home
+            </a>
+
+            <a
+              href="#about"
+              className={activeSection === "about" ? "active" : ""}
+              onClick={closeMenu}
+            >
+              About
+            </a>
+
+            <a
+              href="#career"
+              className={activeSection === "career" ? "active" : ""}
+              onClick={closeMenu}
+            >
+              Career and Education
+            </a>
+
+            <a
+              href="#skills"
+              className={activeSection === "skills" ? "active" : ""}
+              onClick={closeMenu}
+            >
+              Skills
+            </a>
+
+            <a
+              href="#projects"
+              className={activeSection === "projects" ? "active" : ""}
+              onClick={closeMenu}
+            >
+              Projects
+            </a>
+
+            <a
+              href="#achievements"
+              className={activeSection === "achievements" ? "active" : ""}
+              onClick={closeMenu}
+            >
+              Achievements
+            </a>
+
+            <a
+              href="#contact"
+              className={activeSection === "contact" ? "active" : ""}
+              onClick={closeMenu}
+            >
+              Contact
+            </a>
+
           </div>
         </div>
       </nav>
@@ -135,7 +225,10 @@ function App() {
         </div>
       </section>
     </AnimatedSection>
+    <AnimatedSection>
     <Career />
+
+    </AnimatedSection>
 
 
     <AnimatedSection>

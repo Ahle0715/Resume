@@ -87,7 +87,7 @@ function Career() {
   }, []);
 
   return (
-    <section className="career-section" id="career">
+    <section className="section career-section" id="career">
       <div className="career-container">
 
         <div className="career-header">

@@ -103,18 +103,45 @@ img {
 }
 
 .nav-links a {
+  position: relative;
   color: #6f675e;
+  text-decoration: none;
 
   transition:
     color 0.2s ease,
     transform 0.2s ease;
 }
 
+/* Hover */
 .nav-links a:hover {
   color: #c96f4a;
   transform: translateY(-2px);
 }
 
+/* Active link */
+.nav-links a.active {
+  color: #c96f4a;
+}
+
+/* Active underline */
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+
+  height: 2px;
+  background: #c96f4a;
+
+  border-radius: 2px;
+
+  transform: scaleX(1);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
 
 /* =========================================================
    HAMBURGER
