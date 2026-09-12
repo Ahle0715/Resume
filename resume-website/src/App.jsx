@@ -15,7 +15,7 @@ function App() {
       {/* Navigation */}
        <nav className="navbar"> 
         <div className="nav-container">
-          <h2 className="logo">HO ZI LE </h2>
+        <img className="portrait-logo" src="/Resume/potrait_AI.png" alt="Portrait" />
           {/* Hamburger Button */}
           <button
           className={`hamburger ${menuOpen ? "active" : ""}`}
@@ -43,31 +43,42 @@ function App() {
       {/* Hero */}
       <section id="home" className="hero">
         <div className="hero-content">
-          <p className="hero-greeting">Hello, I'm</p>
-          <h1>
-            HO ZI LE
-          </h1>
-          <h2>Software Engineer</h2>
 
-          <p className="hero-description">
-            I build web applications and explore software engineering,
-            artificial intelligence, and modern web technologies.
-          </p>
-
-          <div className="hero-buttons">
-            <a href="#projects" className="btn primary">
-              View My Projects
-            </a>
-
-            <a
-            href="/Resume/resume.pdf"
-            target="_blank"
-            className="btn secondary"
-            >
-            View Resume
-            </a>
+          {/* Portrait */}
+          <div className="hero-portrait">
+            <img src="/Resume/potrait_AI.png" alt="HO ZI LE Portrait" />
           </div>
 
+          {/* Information */}
+          <div className="hero-info">
+            <p className="hero-greeting">Hello, I'm</p>
+
+            <h1>HO ZI LE</h1>
+
+            <h2>Software Engineer</h2>
+
+            <p className="hero-description">
+              I build web applications and explore software engineering,
+              artificial intelligence, and modern web technologies.
+            </p>
+
+            <div className="hero-buttons">
+              <a href="#projects" className="btn primary">
+                View My Projects
+              </a>
+
+              <a
+                href="/Resume/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn secondary"
+              >
+                View Resume
+              </a>
+            </div>
+          </div>
+
+          {/* Scroll hint */}
           <div className="scroll-hint">
             <span className="scroll-arrow">↓</span>
             <span>Scroll to explore</span>
