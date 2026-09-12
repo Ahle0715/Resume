@@ -42,6 +42,14 @@ const careerData = [
     description:
       "Built a strong foundation in programming, software development, databases, and computer science fundamentals.",
   },
+  {
+    year: "2022",
+    title: "Python Full Stack Certificate",
+    company: "Completion of Python Full Stack Certificate by Six Star Education",
+    period: "2021 – 2022",
+    description:
+      "Developed practical skills in Python programming, web development, database management, and full-stack application development through hands-on projects and coursework.",
+  },
 ];
 
 function Career() {
