@@ -596,34 +596,33 @@ SCROLL HINT
 ========================================================= */
 
 .scroll-hint {
-position: absolute;
+  position: absolute;
 
-bottom: 30px;
-left: 50%;
+  bottom: 0px;
+  left: 50%;
 
-transform:
- translateX(-50%)
- translateY(15px);
+  transform:
+  translateX(-50%)
+  translateY(15px);
 
-display: flex;
+  display: flex;
 
-flex-direction: column;
+  flex-direction: column;
 
-align-items: center;
+  align-items: center;
 
-gap: 6px;
+  gap: 6px;
 
-font-size: 0.85rem;
+  font-size: 0.85rem;
 
-color: #6f675e;
+  color: #6f675e;
 
-opacity: 0;
+  opacity: 0;
 
-/*
- Appears only after the entire hero animation.
-*/
-animation:
- showScrollHint 0.8s ease 3.8s forwards;
+  /*
+  Appears only after the entire hero animation.
+  */
+  animation: showScrollHint 0.8s ease 4.2s forwards;
 }
 
 
@@ -1192,61 +1191,7 @@ REDUCED MOTION
 }
 
 
-/* =========================================================
-   SCROLL HINT
-========================================================= */
 
-.scroll-hint {
-  position: absolute;
-
-  bottom: 30px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 6px;
-
-  font-size: 0.85rem;
-  color: #6f675e;
-
-  opacity: 0;
-
-  animation:
-    showScrollHint 0.8s ease 1.8s forwards;
-}
-
-.scroll-arrow {
-  font-size: 1.4rem;
-  line-height: 1;
-
-  animation:
-    arrowBounce 2s ease-in-out 2.6s infinite;
-}
-
-@keyframes showScrollHint {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 0.7;
-  }
-}
-
-@keyframes arrowBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(7px);
-  }
-}
 
 
 /* =========================================================
