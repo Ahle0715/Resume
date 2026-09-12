@@ -57,12 +57,13 @@ function App() {
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
-
+          <a href="#home" className="brand-logo">
           <img
             className="portrait-logo"
             src="/Resume/potrait_AI.png"
             alt="Portrait"
           />
+          </a>
 
           {/* Hamburger Button */}
           <button
