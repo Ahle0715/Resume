@@ -36,6 +36,14 @@ const careerData = [
   },
   {
     year: "2023",
+    title: "Capture The Flag (CTF) Competition Achievement",
+    company: "New Era University College",
+    period: "2023",
+    description:
+      "Participated in the New Era University College Capture The Flag (CTF) Cyber Security Competition, gaining hands-on experience in cybersecurity challenges, problem-solving, and identifying vulnerabilities through practical tasks."
+  },
+  {
+    year: "2023",
     title: "Diploma in Computer Science",
     company: "New Era University College (CGPA:3.89/4.00)",
     period: "2023 – 2025",
